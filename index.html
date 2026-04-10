@@ -428,9 +428,9 @@
         <div class="script-head" style="font-size:40px; margin-top:18px;">A little note from me…</div>
         <div class="divider">✦ &nbsp; ✦ &nbsp; ✦</div>
         <p class="liya-quote">
-          "Hi everyone! I am super excited about my new house!
-          I can't wait to play in my new room and eat lots of sweets
-          with all of you. Please come and bless my family!"
+          "Hi everyone! I am super excited about the beautiful new floors in our home!
+          I can't wait to play there and eat lots of sweets with all of you.
+          Please come and bless my family as we celebrate!"
         </p>
         <div class="liya-sign">— Love, Little Liya 💕</div>
       </div>
@@ -469,14 +469,7 @@
               <div class="sch-desc">Blessings from elders, family, and dear friends.</div>
             </div>
           </div>
-          <div class="sch-row">
-            <div class="sch-icon">🍽️</div>
-            <div>
-              <div class="sch-time">Morning</div>
-              <div class="sch-name">Breakfast Served</div>
-              <div class="sch-desc">Traditional South Indian breakfast served with love.</div>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
@@ -515,27 +508,22 @@
       </div>
     </div>
 
-    <!-- PAGE 6 · RSVP (Grand bg) -->
+    <!-- PAGE 6 · WISHES (Grand bg) -->
     <div class="page-card grand">
       <div class="pg-content scroll-reveal">
-        <div class="tagline">RSVP</div>
-        <div class="script-head">Kindly Reply</div>
+        <div class="tagline">Blessings</div>
+        <div class="script-head">Send Wishes</div>
         <div class="divider">✦ &nbsp; ✦ &nbsp; ✦</div>
-        <p style="font-size:14px; color:#999; margin-bottom:12px; font-family: 'Cormorant Garamond', serif;">
-          Let us know if you can celebrate with us. 🙏
+        <p style="font-size:16px; color:#a56161; margin-bottom:24px; font-family: 'Cormorant Garamond', serif; font-style: italic;">
+          Leave a warm message for our new home.
         </p>
 
         <form class="rsvp-form" onsubmit="submitRSVP(event)">
-          <input class="f-input" type="text" id="rsvp-name" placeholder="Your Name" required>
-          <div class="att-row">
-            <div class="att-opt"><input type="radio" name="att" id="a-y" value="yes" checked><label for="a-y">✅ Yes!</label></div>
-            <div class="att-opt"><input type="radio" name="att" id="a-m" value="maybe"><label for="a-m">🤔 Maybe</label></div>
-            <div class="att-opt"><input type="radio" name="att" id="a-n" value="no"><label for="a-n">😔 Can't</label></div>
-          </div>
-          <textarea class="f-input" id="rsvp-wish" style="min-height:90px;resize:vertical;" placeholder="Leave a warm wish (optional) 💬"></textarea>
-          <button type="submit" class="send-btn">Send Reply &rarr;</button>
+          <input class="f-input" type="text" id="rsvp-name" placeholder="Your Name *" required style="padding:18px; font-size:15px; border-radius:14px; margin-bottom:4px;">
+          <textarea class="f-input" id="rsvp-wish" style="min-height:120px;resize:vertical; padding:18px; font-size:15px; border-radius:14px; margin-bottom:4px;" placeholder="Write your specific wishes here... *" required></textarea>
+          <button type="submit" class="send-btn" style="padding:18px; font-size:15px; border-radius:14px; margin-top:12px;">Submit Wishes &rarr;</button>
         </form>
-        <div class="rsvp-ok" id="rsvp-ok">🎉 Thank you! We received your response.</div>
+        <div class="rsvp-ok" id="rsvp-ok">🎉 Thank you for your lovely wishes!</div>
       </div>
     </div>
 
@@ -640,11 +628,8 @@
     function submitRSVP(e) {
       e.preventDefault();
       var n = document.getElementById('rsvp-name').value;
-      var a = document.querySelector('input[name="att"]:checked').value;
       var w = document.getElementById('rsvp-wish').value;
-      var label = a === 'yes' ? '✅ Yes, attending!' : a === 'maybe' ? '🤔 Maybe' : '😔 Unable to attend';
-      var txt = 'House Warming RSVP 🏡\n\nName: ' + n + '\nAttending: ' + label;
-      if (w) txt += '\nWish: ' + w;
+      var txt = 'House Warming Wishes 🏡\n\nFrom: ' + n + '\nMessage: ' + w;
       window.open('https://wa.me/916381557419?text=' + encodeURIComponent(txt), '_blank');
       e.target.style.display = 'none';
       document.getElementById('rsvp-ok').style.display = 'block';
